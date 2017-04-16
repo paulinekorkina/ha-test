@@ -405,7 +405,7 @@ input:-ms-input-placeholder {
 
 .why-need {
   min-height: 900px;
-  margin-bottom: 110px;
+  margin-bottom: 105px;
   background: url("../img/pattern.jpg") repeat-x;
 }
 
@@ -494,4 +494,179 @@ input:-ms-input-placeholder {
 
 .services-down-text {
   color: #0694f8;
+}
+
+.services {
+  margin-bottom: 76px;
+}
+
+.services-wrap {
+  position: relative;
+  margin-bottom: 159px;
+}
+
+.services-left {
+  float: left;
+  max-width: 343px;
+}
+
+.services-right {
+  float: right;
+  max-width: 350px;
+  text-align: right;
+}
+
+.serv-heading {
+  margin: 0 0 22px 0;
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+.serv-heading-left {
+  color: #0694f8;
+  text-shadow: -1px 1px 0 #003c66;
+}
+
+.serv-heading-right {
+  padding-left: 110px;
+  color: #ff431e;
+  text-shadow: 1px 1px 0 #991900;
+}
+
+.serv-text {
+  margin: 0 0 32px 0;
+  line-height: 24px;
+}
+
+.serv-list {
+  padding: 0;
+  list-style: none;
+}
+
+.serv-item {
+  margin-bottom: 11px;
+  font-weight: 700;
+  font-size: 14px;
+
+}
+
+.serv-list-left li {
+  padding-left: 22px;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+}
+
+.serv-list-right li {
+  position: relative;
+  padding-right: 22px;
+}
+
+.serv-list-left li:nth-child(1) {
+  background-position: -1px -489px;
+}
+
+.serv-list-left li:nth-child(2) {
+  background-position: -5px -504px;
+}
+
+.serv-list-left li:nth-child(3) {
+  background-position: -5px -523px;
+}
+
+.serv-list-left li:nth-child(4) {
+  background-position: -5px -545px;
+}
+
+.serv-list-right li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  width: 13px;
+  height: 13px;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+}
+
+.serv-list-right li:nth-child(1)::after {
+  background-position: -2px -564px;
+}
+
+.serv-list-right li:nth-child(2)::after {
+  background-position: -5px -580px;
+}
+
+.serv-list-right li:nth-child(3)::after {
+  top: 3px;
+  background-position: -5px -602px;
+}
+
+.serv-list-right li:nth-child(4)::after {
+  top: 3px;
+  background-position: -5px -624px;
+}
+
+.serv-image {
+  position: absolute;
+  top: 79px;
+  left: 287px;
+  width: 455px;
+  height: 509px;
+  background: url("../img/services-bg.png") no-repeat;
+  shape-outside: circle(50%);
+}
+
+.contact-us {
+  position: relative;
+  z-index: 2;
+  width: 401px;
+  height: 197px;
+  margin: 0 auto 75px auto;
+  padding-top: 77px;
+  padding-left: 195px;
+  background: url("../img/call-us.png") no-repeat;
+}
+
+.contact-us-text {
+  max-width: 250px;
+  margin: 0 0 5px 0;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #ffffff;
+  text-shadow: 0 2px 0 #0784dc;
+}
+
+.contact-us-phone {
+  margin: 0;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  font-style: italic;
+  color: #ffffff;
+  text-shadow: 0 2px 0 #0784dc;
+}
+
+.contacts-down-text {
+  line-height: 42px;
+  vertical-align: middle;
+  color: #ff431e;
+}
+
+.contacts {
+  color: #ffffff;
+  background-color: #0694f8;
+  /*background: #0694f8 url("../img/contacts-bg.png") no-repeat;*/
+}
+
+.map {
+  float: left;
+  width: 490px;
+}
+
+.contacts-description {
+  float: right;
+  width: 442px;
+  text-align: right;
 }
