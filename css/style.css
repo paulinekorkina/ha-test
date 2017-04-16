@@ -40,11 +40,22 @@ body {
   background-image: url("../img/header-bg.png");
   background-position: center top;
   background-repeat: no-repeat;
+  color: #282828;
 }
 
 .container {
   max-width: 980px;
   margin: 0 auto;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.main-header {
+  margin-bottom: 91px;
 }
 
 .main-navigation {
@@ -94,7 +105,7 @@ body {
 
 .header-text {
   position: relative;
-  width: 690px;
+  width: 680px;
   margin: 0 auto;
   font-size: 48px;
   color: #ffffff;
@@ -137,20 +148,24 @@ body {
   transform: rotate(-10.2deg);
 }
 
-/*.header-text::after {
-  content: "Lorem ipsum dolor consectetuer adipiscing sed diam nonummy nibh!";
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  font-size: 48px;
-  color: transparent;
-  background-color: #b4b4b4;
-  text-shadow: 0 -2px 0 #ffffff;
-  -webkit-background-clip: text;
-     -moz-background-clip: text;
-          background-clip: text;
-}*/
+.header-text span {
+  display: block;
+}
+
+.header-text-1 {
+  padding-left: 75px;
+  text-align: left;
+}
+
+.header-text-2 {
+
+  text-align: right;
+}
+
+.header-text-3 {
+  padding-left: 10px;
+  text-align: left;
+}
 
 .header-wrapper::after {
   content: "";
@@ -168,6 +183,7 @@ body {
 .down {
   display: block;
   text-align: center;
+  text-decoration: none;
 }
 
 .down div {
@@ -176,21 +192,204 @@ body {
 }
 
 .down-icon {
-  margin-right: 10px;
-}
-
-.desc-down-icon {
   width: 22px;
   height: 42px;
+  margin-right: 6px;
   background: url("../img/sprite.png") -5px -130px no-repeat;
 }
 
+.desc-down-icon {
+
+}
+
 .down-text {
+  height: 42px;
+  padding-top: 5px;
+  font-size: 18px;
+  line-height: 1;
   text-align: left;
 }
 
 .desc-down-text {
-  height: 42px;
-  font-size: 18px;
   color: #ff431e;
+}
+
+.description {
+  min-height: 726px;
+  margin-bottom: 105px;
+  background: url("../img/desc-bg.png");
+  background-position: 185px top;
+  background-repeat: no-repeat;
+}
+
+.desc-text {
+  float: left;
+  width: 510px;
+  padding-top: 259px;
+}
+
+.desc-heading {
+  margin: 0 0 22px 0;
+  font-size: 36px;
+  color: #0694f8;
+}
+
+.desc-paragraph {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.desc-feedback {
+  position: relative;
+  float: right;
+  width: 322px;
+  padding: 142px 0 0 97px;
+  color: #505050;
+  background: url("../img/flag-box.png") 140px 50px no-repeat;
+}
+
+.desc-feedback::before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 0;
+  z-index: 2;
+  width: 218px;
+  height: 204px;
+  background: url("../img/hat.png") no-repeat;
+}
+
+.feedback-wrap {
+  margin-bottom: 79px;
+  padding-top: 48px;
+  padding-bottom: 40px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #c8c8c8;
+}
+
+.feedback-heading {
+  margin: 0 0 20px 0;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+}
+
+.feedback-heading span,
+.feedback-tip span {
+  display: block;
+  text-align: center;
+}
+
+.feedback-bigger {
+  margin-bottom: 2px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.feedback-smaller {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.feedback-form {
+  width: 240px;
+  margin: 0 auto 27px auto;
+}
+
+.feedback-form input {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.feedback-form input[type="text"] {
+  height: 42px;
+  padding-left: 15px;
+  font-weight: 700;
+  font-size: 12px;
+  border: 1px solid #c8c8c8;
+  box-shadow:
+    inset 1px -1px 3px -1px rgba(0, 0, 0, 0.25),
+    inset -5px 5px 9px -5px rgba(0, 0, 0, 0.25);
+}
+
+input::placeholder {
+  color: #969696;
+  opacity: 1;
+}
+
+input:placeholder-shown {
+  color: #969696;
+  opacity: 1;
+}
+
+input::-webkit-input-placeholder {
+  color: #969696;
+  opacity: 1;
+}
+
+input::-moz-placeholder {
+  color: #969696;
+  opacity: 1;
+}
+
+input:-moz-placeholder {
+  color: #969696;
+  opacity: 1;
+}
+
+input:-ms-input-placeholder {
+  color: #969696;
+  opacity: 1;
+}
+
+.feedback-name {
+  margin-bottom: 12px;
+}
+
+.feedback-email {
+  margin-bottom: 19px;
+}
+
+.feedback-btn {
+  height: 38px;
+  margin-bottom: 29px;
+  padding: 0;
+  font-weight: 700;
+  font-size: 14px;
+  color: #ffffff;
+  border: none;
+  background-color: #0694f8;
+  box-shadow: 0 2px 0 0 #0568b5;
+}
+
+.feedback-form::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  background: url("../img/divider.png") repeat-x;
+}
+
+.feedback-tip {
+  margin: 0 0 2px 0;
+}
+
+.feedback-phone {
+  margin: 0;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  color: #0694f8;
+  text-align: center;
+}
+
+.need-down-icon {
+  background-position: -5px -182px;
+}
+
+.need-down-text {
+  color: #0694f8;
 }
