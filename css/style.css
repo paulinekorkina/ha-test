@@ -497,7 +497,7 @@ input:-ms-input-placeholder {
 }
 
 .services {
-  margin-bottom: 76px;
+  margin-bottom: 70px;
 }
 
 .services-wrap {
@@ -655,18 +655,97 @@ input:-ms-input-placeholder {
 }
 
 .contacts {
+  height: 605px;
+  padding-top: 95px;
   color: #ffffff;
   background-color: #0694f8;
   /*background: #0694f8 url("../img/contacts-bg.png") no-repeat;*/
 }
 
+.russia-map {
+  width: 1068px;
+  height: 100%;
+  margin: 0 auto;
+  background: url("../img/contacts-bg.png") left bottom no-repeat;
+}
+
+.contacts-wrap {
+  position: relative;
+}
+
 .map {
   float: left;
   width: 490px;
+  height: 427px;
+  background: url("../img/map.png") center 5px no-repeat;
 }
 
 .contacts-description {
   float: right;
   width: 442px;
   text-align: right;
+}
+
+.contacts-heading,
+.contacts-description h3,
+.contacts-description p {
+  margin: 0;
+}
+
+.contacts-heading {
+  margin-bottom: 20px;
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+.contacts-description p {
+  line-height: 1.5;
+}
+
+.contacts-description .contacts-tip {
+  margin-bottom: 25px;
+}
+
+.contacts-description h3 {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 24px;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.contacts-address {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.contacts-phone {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.contacts-address::after,
+.contacts-phone::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -14px;
+  display: block;
+  width: 200px;
+  height: 1px;
+  background-color: #78c7ff;
+}
+
+.contacts-phone::after {
+  bottom: -19px;
+}
+
+.contacts-phone p,
+.contacts-email p {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.contacts-email a {
+  color: #ffffff;
 }
