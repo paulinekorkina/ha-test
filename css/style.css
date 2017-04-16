@@ -749,3 +749,52 @@ input:-ms-input-placeholder {
 .contacts-email a {
   color: #ffffff;
 }
+
+.main-footer {
+  height: 160px;
+  font-size: 12px;
+  color: #787878;
+}
+
+.main-footer p {
+  height: 160px;
+  margin: 0;
+  line-height: 160px;
+  vertical-align: middle;
+}
+
+.copyright {
+  float: left;
+}
+
+.developer {
+  float: right;
+}
+
+.developer a {
+  color: #787878;
+}
+
+.footer-logo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  font-size: 24px;
+  color: #787878;
+}
+
+.modal-feedback {
+  position: fixed;
+  top: 30%;
+  left: 0;
+}
+
+.modal-inner {
+  background-color: #ffffff;
+  border: 1px solid #c8c8c8;
+  border-radius: 0 0 5px 0;
+}
+
+.modal-confirmation {
+  display: none;
+}
