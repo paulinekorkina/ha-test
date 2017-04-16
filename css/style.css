@@ -92,14 +92,17 @@ body {
 }
 
 .logo {
+  font-size: 24px;
+  color: #252525;
+  text-align: center;
+}
+
+.header-logo {
   width: 100px;
   height: 105px;
   margin: 0 auto 200px auto;
-  font-size: 24px;
   line-height: 105px;
   vertical-align: middle;
-  color: #252525;
-  text-align: center;
   background: url("../img/logo.png") no-repeat;
 }
 
@@ -298,13 +301,19 @@ body {
   margin: 0 auto 27px auto;
 }
 
-.feedback-form input {
+/*.feedback-form input {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+}*/
+
+.form input {
   width: 100%;
   box-sizing: border-box;
   border-radius: 5px;
 }
 
-.feedback-form input[type="text"] {
+.form input[type="text"] {
   height: 42px;
   padding-left: 15px;
   font-weight: 700;
@@ -345,15 +354,15 @@ input:-ms-input-placeholder {
   opacity: 1;
 }
 
-.feedback-name {
+.user-name {
   margin-bottom: 12px;
 }
 
-.feedback-email {
+.user-email {
   margin-bottom: 19px;
 }
 
-.feedback-btn {
+.btn {
   height: 38px;
   margin-bottom: 29px;
   padding: 0;
@@ -391,5 +400,98 @@ input:-ms-input-placeholder {
 }
 
 .need-down-text {
+  color: #0694f8;
+}
+
+.why-need {
+  min-height: 900px;
+  margin-bottom: 110px;
+  background: url("../img/pattern.jpg") repeat-x;
+}
+
+.clients {
+  height: 532px;
+  background: url("../img/why-need-backlight.png") center top no-repeat;
+}
+
+.clients-wrap {
+  width: 796px;
+  height: 445px;
+  padding-top: 94px;
+  margin: 0 auto;
+  background: url("../img/notes.png") left 50px no-repeat;
+}
+
+.clients-heading {
+  margin: 0;
+  font-size: 30px;
+  text-align: center;
+  background-image: linear-gradient(#773404, #aa8045);
+  color: transparent;
+  text-shadow: -2px 2px 1px rgba(255, 222, 169, 0.3);
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
+}
+
+.request {
+  width: 1266px;
+  min-height: 509px;
+  margin: 0 auto 27px auto;
+  padding-top: 63px;
+  background: url("../img/request-bg.png") right top no-repeat;
+}
+
+.request-logo {
+  margin: 0 0 20px 0;
+  color: #1c1d1d;
+}
+
+.request-heading {
+  margin: 0 0 20px 0;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.request-bigger {
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+.request-smaller {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.red {
+  font-weight: 700;
+  color: #ff431e;
+}
+
+.request-heading > span {
+  display: block;
+  text-align: center;
+}
+
+.request-form {
+  width: 242px;
+  margin: 0 auto;
+}
+
+.request-form::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  margin-bottom: 27px;
+  background: url("../img/divider.png") repeat-x;
+}
+
+.services-down-icon {
+  background-position: -5px -182px;
+}
+
+.services-down-text {
   color: #0694f8;
 }
