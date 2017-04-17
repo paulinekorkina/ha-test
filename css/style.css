@@ -20,7 +20,7 @@ h3,
   font-style: italic;
 }
 
-/*div,
+div,
 article,
 ul {
   outline: 1px dashed orangered;
@@ -34,7 +34,7 @@ p,
 a,
 li {
   outline: 1px dashed #888888;
-}*/
+}
 
 body {
   background-image: url("../img/header-bg.png");
@@ -211,7 +211,21 @@ body {
     /*белая подсветка*/
     0 0 50px rgba(255, 255, 255, 0.5);
   transform: rotate(-10.2deg);
+
 }
+
+/*.header-text-1::after {
+  content: "Lorem ipsum dolor";
+  position: absolute;
+  top: 0;
+  left: 75px;
+  background-color: #565656;
+  color: transparent;
+  text-shadow: 0px -7px 0 rgba(255, 255, 255, 0.9);
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
+}*/
 
 .header-text span {
   display: block;
@@ -242,34 +256,48 @@ body {
   width: 849px;
   height: 122px;
   margin: 0 auto;
-  background: url("../img/bubbles.png");
+  background: url("../img/bubbles.png") no-repeat;
 }
 
 .down {
+  position: relative;
   display: block;
   text-align: center;
   text-decoration: none;
 }
 
+.down::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  right: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #c8c8c8;
+}
+
 .down div {
+  position: relative;
+  z-index: 2;
   display: inline-block;
   vertical-align: top;
+  background-color: #ffffff;
 }
 
 .down-icon {
   width: 22px;
   height: 42px;
-  margin-right: 6px;
-  background: url("../img/sprite.png") -5px -130px no-repeat;
-}
-
-.desc-down-icon {
-
+  padding-right: 6px;
+  padding-left: 48px;
+  background: url("../img/sprite.png") 43px -130px no-repeat;
 }
 
 .down-text {
   height: 42px;
   padding-top: 5px;
+  padding-right: 48px;
   font-size: 18px;
   line-height: 1;
   text-align: left;
@@ -289,7 +317,8 @@ body {
 
 .desc-text {
   float: left;
-  width: 510px;
+  /*width: 510px;*/
+  width: 52.04081632653061%; /* 510/980 */
   padding-top: 259px;
 }
 
@@ -307,13 +336,16 @@ body {
 .desc-feedback {
   position: relative;
   float: right;
-  width: 322px;
+  /*width: 419px;*/
+  width: 42.75510204081633%; /* 419/980 */
   padding: 142px 0 0 97px;
+  padding: 142px 0 0 0;
+  box-sizing: border-box;
   color: #505050;
   background: url("../img/flag-box.png") 140px 50px no-repeat;
 }
 
-.desc-feedback::before {
+/*.desc-feedback::before {
   content: "";
   position: absolute;
   top: 17px;
@@ -322,15 +354,31 @@ body {
   width: 218px;
   height: 204px;
   background: url("../img/hat.png") no-repeat;
-}
+}*/
 
 .feedback-wrap {
+  position: relative;
+  width: 76.84964200477327%; /* 322/419 */
+  min-width: 320px;
   margin-bottom: 79px;
+  margin-left: auto;
   padding-top: 48px;
   padding-bottom: 40px;
+  box-sizing: border-box;
   background-color: #ffffff;
   border-radius: 5px;
   border: 1px solid #c8c8c8;
+}
+
+.feedback-wrap::before {
+  content: "";
+  position: absolute;
+  top: -126px;
+  left: -99px;
+  z-index: 2;
+  width: 218px;
+  height: 204px;
+  background: url("../img/hat.png") no-repeat;
 }
 
 .feedback-heading {
@@ -458,7 +506,7 @@ input:-ms-input-placeholder {
 }
 
 .need-down-icon {
-  background-position: -5px -182px;
+  background-position: 43px -182px;
 }
 
 .need-down-text {
@@ -478,6 +526,7 @@ input:-ms-input-placeholder {
 
 .clients-wrap {
   width: 796px;
+  max-width: 90%;
   height: 445px;
   padding-top: 94px;
   margin: 0 auto;
@@ -498,10 +547,11 @@ input:-ms-input-placeholder {
 
 .request {
   width: 1266px;
+  max-width: 100%;
   min-height: 509px;
   margin: 0 auto 27px auto;
   padding-top: 63px;
-  background: url("../img/request-bg.png") right top no-repeat;
+  background: url("../img/request-bg.png") center top no-repeat;
 }
 
 .request-logo {
@@ -551,7 +601,7 @@ input:-ms-input-placeholder {
 }
 
 .services-down-icon {
-  background-position: -5px -182px;
+  background-position: 43px -182px;
 }
 
 .services-down-text {
@@ -590,7 +640,8 @@ input:-ms-input-placeholder {
 }
 
 .serv-heading-right {
-  padding-left: 110px;
+  max-width: 240px;
+  margin-left: auto;
   color: #ff431e;
   text-shadow: 1px 1px 0 #991900;
 }
@@ -677,7 +728,7 @@ input:-ms-input-placeholder {
   width: 455px;
   height: 509px;
   background: url("../img/services-bg.png") no-repeat;
-  shape-outside: circle(50%);
+  /*shape-outside: circle(50%);*/
 }
 
 .contact-us {
@@ -726,6 +777,7 @@ input:-ms-input-placeholder {
 
 .russia-map {
   width: 1068px;
+  max-width: 100%;
   height: 100%;
   margin: 0 auto;
   background: url("../img/contacts-bg.png") left bottom no-repeat;
@@ -737,14 +789,16 @@ input:-ms-input-placeholder {
 
 .map {
   float: left;
-  width: 490px;
+  /*width: 490px;*/
+  width: 50%;
   height: 427px;
   background: url("../img/map.png") center 5px no-repeat;
 }
 
 .contacts-description {
   float: right;
-  width: 442px;
+  /*width: 442px;*/
+  width: 45.10204081632653%; /* 442/980 */
   text-align: right;
 }
 
@@ -985,4 +1039,66 @@ input:-ms-input-placeholder {
   background-color: #ff431e;
   border-radius: 5px;
   box-shadow: 0 2px 0 0 #bb2406;
+}
+
+@media screen and (max-width: 1050px) {
+  .container {
+    max-width: 100%;
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+
+  .main-menu {
+    padding: 0;
+  }
+
+  .menu-item {
+    width: 140px;
+    margin-right: 20px;
+  }
+
+  .serv-image {
+    top: 180px;
+    left: 29.28571428571429%; /* 287/980 */
+    width: 46.42857142857143%; /* 455/980 */
+    height: 509px;
+    background-size: contain;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .menu-item {
+    width: 140px;
+    margin-right: 5px;
+  }
+
+  .header-wrapper::after {
+    width: 86.63265306122449%; /*849/980*/
+    background-size: contain;
+  }
+
+  .serv-image {
+    top: 230px;
+  }
+
+  .services-left,
+  .services-right {
+    width: 40%;
+  }
+
+  .desc-text {
+    width: 48%;
+  }
+
+  .desc-feedback {
+    width: 48%;
+  }
+
+  .clients-wrap {
+    background-size: contain;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
 }
