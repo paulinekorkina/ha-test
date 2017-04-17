@@ -1378,21 +1378,69 @@ input:-ms-input-placeholder {
     margin-bottom: -10px;
   }
 
+  .services {
+    /*margin-bottom: 30px;*/
+  }
+
+  .services-wrap {
+    margin-bottom: 20px;
+  }
+
+  .services-left,
+  .services-right {
+    width: 81.25%;
+    max-width: none;
+    margin: 0 auto;
+  }
+
+  .services-left {
+    /*margin-bottom: 325px;*/
+  }
+
+  .serv-list {
+    margin-bottom: 0;
+  }
+
+  .serv-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .serv-image {
+    position: static;
+    width: 319px;
+    height: 315px;
+    margin: 0 auto 20px auto;
+    background-image: url("../img/services-bg-mob.png");
+  }
+
+  .contact-us {
+    width: 100%;
+    height: 162px;
+    padding-top: 75px;
+    padding-left: 0;
+    /*padding: 0;*/
+    background-image: url("../img/call-us-mob.png");
+    background-position: center;
+  }
+
+  .contact-us-text,
+  .contact-us-phone {
+    width: 260px;
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-us-phone {
+    font-size: 30px;
+  }
+
   .ch-mobile {
     display: block;
   }
 
   .ch-desktop {
     display: none;
-  }
-
-  .contact-us {
-    width: 100%;
-    padding: 0;
-  }
-
-  .contact-us-phone {
-    font-size: 30px;
   }
 }
 
