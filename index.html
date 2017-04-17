@@ -14,33 +14,35 @@
   <body>
     <header class="main-header">
       <nav class="main-navigation" id="navigation">
+        <input class="mobile-menu-input" type="checkbox" name="mobile-menu" id="btn-menu" />
+        <label class="mobile-menu-btn" for="btn-menu">Меню</label>
         <ul class="main-menu container">
           <li class="menu-item active">
-            <a href="#description">
+            <a class="clearfix" href="#description">
               <span class="menu-item-icon"></span>
               <span class="menu-item-text">Описание услуги</span>
             </a>
           </li>
           <li class="menu-item">
-            <a href="#why-need">
+            <a class="clearfix" href="#why-need">
               <span class="menu-item-icon"></span>
               <span class="menu-item-text">Зачем мне это?</span>
             </a>
           </li>
           <li class="menu-item">
-            <a href="#why-we">
+            <a class="clearfix" href="#why-we">
               <span class="menu-item-icon"></span>
               <span class="menu-item-text">Почему мы?</span>
             </a>
           </li>
           <li class="menu-item">
-            <a href="#services">
+            <a class="clearfix" href="#services">
               <span class="menu-item-icon"></span>
               <span class="menu-item-text">А что есть?</span>
             </a>
           </li>
           <li class="menu-item">
-            <a href="#contacts">
+            <a class="clearfix" href="#contacts">
               <span class="menu-item-icon"></span>
               <span class="menu-item-text">А где?</span>
             </a>
@@ -55,10 +57,14 @@
           <span class="header-text-3">sed diam nonummy nibh!</span>
         </h1>
       </div>
-        <a class="down desc-down" href="#description">
-          <div class="down-icon desc-down-icon"></div>
-          <div class="down-text desc-down-text">Крути<br> вниз</div>
-        </a>
+      <a class="down desc-down container down-desktop" href="#description">
+        <div class="down-icon desc-down-icon desc-icon-mob"></div>
+        <div class="down-text desc-down-text">Крути<br> вниз</div>
+      </a>
+      <a class="down desc-down container down-mobile" href="#description">
+        <div class="down-icon desc-down-icon desc-icon-mob"></div>
+        <div class="down-text desc-down-text">Листай<br> вниз</div>
+      </a>
     </header>
     <section class="description container" id="description">
       <div class="desc-wrapper clearfix">
@@ -108,7 +114,7 @@
           <input class="btn" type="submit" value="Отправить">
         </form>
       </div>
-      <a class="down services-down" href="#services">
+      <a class="down services-down container" href="#services">
         <div class="down-icon services-down-icon"></div>
         <div class="down-text services-down-text">А что<br> есть?</div>
       </a>
@@ -143,7 +149,7 @@
         </p>
         <p class="contact-us-phone">+7 (8162) 12 34 56</p>
       </div>
-      <a class="down contacts-down" href="#contacts">
+      <a class="down contacts-down container" href="#contacts">
         <div class="down-icon contacts-down-icon"></div>
         <div class="down-text contacts-down-text">А где?</div>
       </a>
@@ -155,7 +161,8 @@
             <!-- <img src="img/map.png" alt="Как нас найти"> -->
           </div>
           <div class="contacts-description">
-            <h2 class="contacts-heading">Lorem ipsum dolor sit amet, consectetur</h2>
+            <h2 class="contacts-heading ch-desktop">Lorem ipsum dolor sit amet, consectetur</h2>
+            <h2 class="contacts-heading ch-mobile">Lorem ipsum dolor sit amet</h2>
             <p class="contacts-tip">Ut enim ad minim veniam, quis nostrud exercitation ullam&shy;co laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
             <div class="contacts-address">
               <h3>Адрес</h3>
