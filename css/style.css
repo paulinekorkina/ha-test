@@ -59,27 +59,88 @@ body {
 }
 
 .main-navigation {
-  display: none;
-  height: 120px;
+  position: fixed;
+  top: -160px;
+  right: 0;
+  left: 0;
+  z-index: 3;
+  height: 88px;
+  padding-top: 32px;
   background-color: #ffffff;
+  -webkit-transition-duration: 0.3s;
+     -moz-transition-duration: 0.3s;
+       -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.main-navigation-open {
+  top: 0;
+  -webkit-transition-duration: 0.3s;
+     -moz-transition-duration: 0.3s;
+       -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 
 .main-menu {
-  padding: 0;
+  padding: 0 0 0 18px;
+  box-sizing: border-box;
   text-align: center;
   list-style: none;
 }
 
 .menu-item {
   display: inline-block;
-  width: 140px;
-  margin-right: 55px;
+  width: 189px;
+  /*margin-right: 55px;*/
   vertical-align: top;
   text-align: center;
 }
 
 .menu-item:last-of-type {
   margin-right: 0;
+}
+
+.menu-item a {
+  text-decoration: none;
+}
+
+.menu-item span {
+  display: block;
+}
+
+.menu-item-icon {
+  width: 37px;
+  height: 35px;
+  margin: 0 auto 4px auto;
+  background: url("../img/sprite.png") no-repeat;
+}
+
+.menu-item:nth-child(1) .menu-item-icon {
+  background-position: -5px -282px;
+}
+
+.menu-item:nth-child(2) .menu-item-icon {
+  background-position: -5px -327px;
+}
+
+.menu-item:nth-child(3) .menu-item-icon {
+  background-position: -5px -371px;
+}
+
+.menu-item:nth-child(4) .menu-item-icon {
+  background-position: -5px -416px;
+}
+
+.menu-item:nth-child(5) .menu-item-icon {
+  background-position: -5px -454px;
+}
+
+.menu-item-text {
+  color: #969696;
+}
+
+.active .menu-item-text {
+  color: #ff431e;
 }
 
 .header-wrapper {
@@ -839,7 +900,7 @@ input:-ms-input-placeholder {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 3;
+  z-index: 98;
   display: none;
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -853,7 +914,7 @@ input:-ms-input-placeholder {
   top: 30%;
   right: 0;
   left: 0;
-  z-index: 4;
+  z-index: 99;
   display: none;
   width: 320px;
   margin: 0 auto;

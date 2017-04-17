@@ -38,3 +38,14 @@ overlay.addEventListener("click", function(event) {
   confirmPopup.classList.remove("modal-confirmation-open");
   overlay.classList.remove("modal-overlay-open");
 });
+
+$(document).ready(function(){
+  var $menu = $("#navigation");
+  $(window).scroll(function(){
+    if ( $(this).scrollTop() > 100 && !$menu.hasClass("main-navigation-open") ) {
+      $menu.addClass("main-navigation-open");
+    } else if($(this).scrollTop() <= 100 && $menu.hasClass("main-navigation-open")) {
+        $menu.removeClass("main-navigation-open");
+      }
+  });
+});
