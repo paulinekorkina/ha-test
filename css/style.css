@@ -20,7 +20,7 @@ h3,
   font-style: italic;
 }
 
-div,
+/*div,
 article,
 ul {
   outline: 1px dashed orangered;
@@ -34,7 +34,7 @@ p,
 a,
 li {
   outline: 1px dashed #888888;
-}
+}*/
 
 body {
   background-image: url("../img/header-bg.png");
@@ -785,14 +785,51 @@ input:-ms-input-placeholder {
 
 .modal-feedback {
   position: fixed;
-  top: 30%;
+  top: 20%;
+  left: -323px;
+  -webkit-transition-duration: 0.3s;
+     -moz-transition-duration: 0.3s;
+       -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.modal-feedback-open {
   left: 0;
+  -webkit-transition-duration: 0.3s;
+     -moz-transition-duration: 0.3s;
+       -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 
 .modal-inner {
+  width: 321px;
+  padding-top: 48px;
+  padding-bottom: 40px;
   background-color: #ffffff;
   border: 1px solid #c8c8c8;
   border-radius: 0 0 5px 0;
+}
+
+.modal-label {
+  position: absolute;
+  top: 75px;
+  right: -125px;
+  display: block;
+  width: 182px;
+  height: 50px;
+  padding-left: 18px;
+  background: url("../img/form-button.png") no-repeat;
+  transform: rotate(-90deg);
+  text-decoration: none;
+}
+
+.modal-label span {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 50px;
+  vertical-align: middle;
+  color: #ffffff;
+  text-shadow: -1px 0 1px #0568b5;
 }
 
 .modal-confirmation {
