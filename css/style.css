@@ -612,7 +612,7 @@ input:-ms-input-placeholder {
   display: block;
   width: 100%;
   height: 5px;
-  margin-bottom: 27px;
+  margin-bottom: 20px;
   background: url("../img/divider.png") repeat-x;
 }
 
@@ -927,6 +927,7 @@ input:-ms-input-placeholder {
   position: fixed;
   top: 20%;
   left: -323px;
+  z-index: 90;
   -webkit-transition-duration: 0.3s;
      -moz-transition-duration: 0.3s;
        -o-transition-duration: 0.3s;
@@ -1338,6 +1339,7 @@ input:-ms-input-placeholder {
 
   .desc-heading {
     font-size: 24px;
+    line-height: 24px;
     /*font-size: 7.5vw;*/
   }
 
@@ -1348,13 +1350,14 @@ input:-ms-input-placeholder {
 
   .desc-feedback {
     width: 100%;
-    padding: 125px 0 0 0;
+    padding: 122px 0 0 0;
     background: url("../img/desc-bg-mob.png") center top no-repeat;
   }
 
   .feedback-wrap {
     width: 320px;
-    margin: 0 auto;
+    margin: 0 auto 15px auto;
+    /*border-bottom: none;*/
   }
 
   .why-need {
@@ -1387,7 +1390,16 @@ input:-ms-input-placeholder {
   }
 
   .request {
-    margin-bottom: -20px;
+    margin-bottom: -25px;
+  }
+
+  .request-heading {
+    margin-bottom: 15px;
+  }
+
+  .request-smaller {
+    width: 200px;
+    margin: 0 auto;
   }
 
   .services {
@@ -1591,7 +1603,7 @@ input:-ms-input-placeholder {
 
 @media screen and (max-width: 420px) {
   .header-wrapper {
-    padding-bottom: 55%;
+    padding-bottom: 60%;
   }
 
   .contacts-address {
@@ -1604,10 +1616,12 @@ input:-ms-input-placeholder {
 
 @media screen and (max-width: 320px) {
   .header-wrapper {
-    height: 410px;
+    height: 425px;
     padding-bottom: 0;
     box-sizing: border-box;
   }
 
-
+  .feedback-wrap {
+    border-bottom: none;
+  }
 }
