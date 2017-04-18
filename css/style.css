@@ -9,6 +9,13 @@ input {
   font-family: "Open Sans", "Arial", sans-serif;
 }
 
+@font-face {
+  font-family: "inglobal";
+  src: url("../fonts/inglobalbi.woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
 h1,
 h2,
 h3,
