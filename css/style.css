@@ -20,7 +20,7 @@ h3,
   font-style: italic;
 }
 
-div,
+/*div,
 article,
 ul {
   outline: 1px dashed orangered;
@@ -34,7 +34,7 @@ p,
 a,
 li {
   outline: 1px dashed #888888;
-}
+}*/
 
 body {
   background-image: url("../img/header-bg.png");
@@ -658,6 +658,10 @@ input:-ms-input-placeholder {
 .serv-text {
   margin: 0 0 32px 0;
   line-height: 24px;
+}
+
+.serv-text-mobile {
+  display: none;
 }
 
 .serv-list {
@@ -1290,6 +1294,7 @@ input:-ms-input-placeholder {
   .down-text {
     height: 45px;
     padding-right: 25px;
+    box-sizing: border-box;
   }
 
   .need-down-icon,
@@ -1375,11 +1380,11 @@ input:-ms-input-placeholder {
   }
 
   .request {
-    margin-bottom: -10px;
+    margin-bottom: -20px;
   }
 
   .services {
-    /*margin-bottom: 30px;*/
+    margin-bottom: 20px;
   }
 
   .services-wrap {
@@ -1397,8 +1402,26 @@ input:-ms-input-placeholder {
     /*margin-bottom: 325px;*/
   }
 
+  .serv-text {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .serv-text-mobile {
+    display: block;
+  }
+
+  .serv-text-desktop {
+    display: none;
+  }
+
   .serv-list {
     margin-bottom: 0;
+  }
+
+  .serv-heading {
+    font-size: 30px;
+    line-height: 1.2;
   }
 
   .serv-item:last-child {
@@ -1409,13 +1432,14 @@ input:-ms-input-placeholder {
     position: static;
     width: 319px;
     height: 315px;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 15px auto;
     background-image: url("../img/services-bg-mob.png");
   }
 
   .contact-us {
     width: 100%;
     height: 162px;
+    margin-bottom: 16px;
     padding-top: 75px;
     padding-left: 0;
     /*padding: 0;*/
@@ -1442,18 +1466,116 @@ input:-ms-input-placeholder {
   .ch-desktop {
     display: none;
   }
+
+  .contacts {
+    height: auto;
+    padding-top: 50px;
+  }
+
+  .contacts-description {
+    width: 81.25%;
+    padding-bottom: 65px;
+    margin: 0 auto;
+    font-size: 14px;
+  }
+
+  .contacts-heading {
+    font-size: 24px;
+  }
+
+  .contacts-tip,
+  .contacts-address p,
+  .contacts-phone p,
+  .contacts-email p {
+    font-size: 14px;
+  }
+
+  .contacts-description p {
+    line-height: 18px;
+  }
+
+  .contacts-tip {
+
+  }
+
+  .contacts-description h3 {
+    margin-bottom: -2px;
+    font-size: 12px;
+  }
+
+  .contacts-address::after,
+  .contacts-phone::after {
+    display: none;
+  }
+
+  .contacts-address {
+    margin-bottom: 20px;
+  }
+
+  .contacts-phone {
+    margin-bottom: 20px;
+  }
+
+  .map {
+    width: 100%;
+    height: 360px;
+    background: url("../img/map-mobile.jpg") center top no-repeat;
+  }
+
+  .main-footer {
+    height: auto;
+    padding: 28px 0;
+  }
+
+  .main-footer p {
+    height: auto;
+    line-height: normal;
+  }
+
+  .main-footer .footer-logo {
+    position: static;
+    margin-bottom: 25px;
+  }
+
+  .main-footer .copyright,
+  .main-footer .developer {
+    width: 53.75%; /* 172/320 */
+    margin: 0 auto;
+    line-height: normal;
+    text-align: center;
+  }
+
+  .main-footer .copyright {
+    margin-bottom: 10px;
+  }
+
+  .modal-confirmation {
+    top: 20%;
+    width: 81.25%;
+  }
+
+  .confirm-body {
+    height: 159px;
+    padding-top: 30px;
+  }
+
+  .confirm-text {
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 
-@media screen and (max-width: 600px) {
-  /*.clients-wrap {
-    background-position: center 50px;
-    background-size: 600px auto;
-  }*/
+@media screen and (max-width: 658px) {
+  .header-wrapper {
+    padding-bottom: 350px;
+  }
 }
 
 @media screen and (max-width: 533px) {
   .header-wrapper {
     margin-bottom: 0;
+    padding-bottom: 65%;
     background-image: url("../img/header-collage-mob.png");
     background-position: center 15px;
     background-size: contain;
@@ -1461,14 +1583,24 @@ input:-ms-input-placeholder {
 }
 
 @media screen and (max-width: 420px) {
+  .header-wrapper {
+    padding-bottom: 55%;
+  }
 
-
-
+  .contacts-address {
+    width: 215px;
+    margin-left: auto;
+    margin-bottom:
+  }
 }
 
 
 @media screen and (max-width: 320px) {
   .header-wrapper {
-    height: 420px;
+    height: 410px;
+    padding-bottom: 0;
+    box-sizing: border-box;
   }
+
+
 }
