@@ -305,7 +305,8 @@ body {
 .down-icon {
   width: 22px;
   height: 42px;
-  padding-right: 6px;
+  margin-right: -5px;
+  padding-right: 11px;
   padding-left: 48px;
   background: url("../img/sprite.png") 43px -130px no-repeat;
 }
@@ -908,6 +909,8 @@ input:-ms-input-placeholder {
 }
 
 .developer {
+  position: relative;
+  z-index: 2;
   float: right;
 }
 
