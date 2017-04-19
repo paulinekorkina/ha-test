@@ -1548,11 +1548,15 @@ input:-ms-input-placeholder {
     line-height: 18px;
   }
 
-  .description,
   .why-need,
   .services {
     border-top: 70px solid transparent;
     margin-top: -70px;
+  }
+
+  .description {
+    border-top: 80px solid transparent;
+    margin-top: -80px;
   }
 
   .contacts {
