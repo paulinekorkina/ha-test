@@ -222,7 +222,8 @@ body {
     -2px 0 0 #1e1e1e,
     /*белая подсветка*/
     0 0 50px rgba(255, 255, 255, 0.5);
-  transform: rotate(-10.2deg);
+  -ms-transform: rotate(-10.2deg);
+      transform: rotate(-10.2deg);
 
 }
 
@@ -963,7 +964,8 @@ input:-ms-input-placeholder {
   height: 50px;
   padding-left: 18px;
   background: url("../img/form-button.png") no-repeat;
-  transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+      transform: rotate(-90deg);
   text-decoration: none;
 }
 
