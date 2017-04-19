@@ -81,7 +81,7 @@
             <form class="form feedback-form">
               <input class="user-name feedback-name" type="text" placeholder="Имя" required>
               <input class="user-email feedback-email" type="text" placeholder="E-mail" required>
-              <input class="btn feedback-btn" type="submit" value="Отправить">
+              <input class="btn feedback-btn" type="submit" value="Отправить" id="feedback-btn">
             </form>
             <p class="feedback-tip">
               <span class="feedback-bigger">Ut enim ad minim veniam</span>
@@ -186,8 +186,8 @@
       <p class="copyright">© ОАО “Badass company”, 2011-2015</p>
       <p class="developer">Разработка и дизайн - рекламное агентство <a href="#">Haloart</a></p>
     </footer>
-    <div class="modal-feedback">
-      <a class="modal-label" href="#">
+    <div class="modal-feedback" id="modal-feedback">
+      <a class="modal-label" href="#" id="modal-label">
         <span>Напишите нам!</span>
       </a>
       <div class="modal-inner">
@@ -208,8 +208,8 @@
       </div>
 
     </div>
-    <div class="modal-overlay"></div>
-    <div class="modal-confirmation">
+    <div class="modal-overlay" id="overlay"></div>
+    <div class="modal-confirmation" id="modal-confirmation">
       <h2 class="confirm-heading">Спасибо!</h2>
       <div class="confirm-body">
         <p class="confirm-text">В ближайшее время мы с вами обязательно свяжемся</p>

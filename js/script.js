@@ -1,51 +1,35 @@
-var feedbackBtn = document.querySelector(".modal-label");
-var feedbackPopup = document.querySelector(".modal-feedback");
-var sendBtnList = document.querySelectorAll(".btn");
-var confirmPopup = document.querySelector(".modal-confirmation");
-var closeBtn = confirmPopup.querySelector(".confirm-close");
-var overlay = document.querySelector(".modal-overlay");
+$(document).ready(function() {
+  var overlay = $("#overlay");
+  var send = $(".btn");
+  var close = $(".confirm-close, #overlay");
+  var confirm = $("#modal-confirmation");
+  var feedbackBtn = $(".modal-label");
+  var feedbackPopup = $(".modal-feedback");
+  var menu = $("#navigation");
 
-feedbackBtn.addEventListener("click", function(event) {
-  event.preventDefault();
-  feedbackPopup.classList.toggle("modal-feedback-open");
-});
+    send.click( function(event){
+      event.preventDefault();
+      confirm.addClass("modal-confirmation-open");
+      overlay.addClass("modal-overlay-open");
+    });
 
-for (var i = 0; i < sendBtnList.length; ++i) {
-  var sendBtn = sendBtnList[i];
-  sendBtn.addEventListener("click", function(event) {
-    event.preventDefault();
-    confirmPopup.classList.add("modal-confirmation-open");
-    overlay.classList.add("modal-overlay-open");
-  });
-}
+    close.click( function(event){
+      event.preventDefault();
+      confirm.removeClass("modal-confirmation-open");
+      overlay.removeClass("modal-overlay-open");
+    });
 
-closeBtn.addEventListener("click", function(event) {
-  event.preventDefault();
-  confirmPopup.classList.remove("modal-confirmation-open");
-  overlay.classList.remove("modal-overlay-open");
-});
+    feedbackBtn.click(function(event){
+      event.preventDefault();
+      feedbackPopup.toggleClass("modal-feedback-open");
+    });
 
-window.addEventListener("keydown", function(event) {
-  if (event.keyCode === 27) {
-    if (confirmPopup.classList.contains("modal-confirmation-open")) {
-      confirmPopup.classList.remove("modal-confirmation-open");
-      overlay.classList.remove("modal-overlay-open");
-    }
-  }
-});
+    $(window).scroll(function(){
+      if ( $(this).scrollTop() > 100 && !menu.hasClass("main-navigation-open") ) {
+        menu.addClass("main-navigation-open");
+      } else if($(this).scrollTop() <= 100 && menu.hasClass("main-navigation-open")) {
+          menu.removeClass("main-navigation-open");
+        }
+    });
 
-overlay.addEventListener("click", function(event) {
-  confirmPopup.classList.remove("modal-confirmation-open");
-  overlay.classList.remove("modal-overlay-open");
-});
-
-$(document).ready(function(){
-  var $menu = $("#navigation");
-  $(window).scroll(function(){
-    if ( $(this).scrollTop() > 100 && !$menu.hasClass("main-navigation-open") ) {
-      $menu.addClass("main-navigation-open");
-    } else if($(this).scrollTop() <= 100 && $menu.hasClass("main-navigation-open")) {
-        $menu.removeClass("main-navigation-open");
-      }
-  });
 });
