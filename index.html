@@ -7,9 +7,20 @@
     <meta name="description" content="">
     <title>Lorem ipsum</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,700i&amp;subset=cyrillic" rel="stylesheet">
-    <!-- <link href="http://www.inglobal.ru/fonts/inglobal.css" type="text/css" rel="stylesheet" /> -->
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <!--[if IE 9]>
+      <style>
+        .menu-item {
+          width: 140px;
+          margin-right: 15px;
+        }
+
+        .clients-heading {
+          color: #773404;
+        }
+      </style>
+    <![endif]-->
   </head>
   <body>
     <header class="main-header">
@@ -18,7 +29,7 @@
         <label class="mobile-menu-btn" for="btn-menu">Меню</label>
         <ul class="main-menu container">
           <li class="menu-item active">
-            <a class="clearfix" href="#description">
+            <a class="clearfix" href="#descr">
               <span class="menu-item-icon"></span>
               <span class="menu-item-text">Описание услуги</span>
             </a>
@@ -30,7 +41,7 @@
             </a>
           </li>
           <li class="menu-item">
-            <a class="clearfix" href="#why-we">
+            <a class="clearfix" href="#">
               <span class="menu-item-icon"></span>
               <span class="menu-item-text">Почему мы?</span>
             </a>
@@ -57,16 +68,16 @@
           <span class="header-text-3">sed diam nonummy nibh!</span>
         </h1>
       </div>
-      <a class="down desc-down container down-desktop" href="#description">
+      <a class="down desc-down container down-desktop" href="#descr">
         <div class="down-icon desc-down-icon desc-icon-mob"></div>
         <div class="down-text desc-down-text">Крути<br> вниз</div>
       </a>
-      <a class="down desc-down container down-mobile" href="#description">
+      <a class="down desc-down container down-mobile" href="#descr">
         <div class="down-icon desc-down-icon desc-icon-mob"></div>
         <div class="down-text desc-down-text">Листай<br> вниз</div>
       </a>
     </header>
-    <section class="description container" id="description">
+    <section id="descr" class="description container">
       <div class="desc-wrapper clearfix">
         <div class="desc-text">
           <h2 class="desc-heading">Lorem ipsum dolor sit amet, consectetur</h2>
@@ -175,9 +186,7 @@
               <p><a href="mailto:example@mail.ru">example@mail.ru</a></p>
             </div>
           </div>
-          <div class="map">
-            <!-- <img src="img/map.png" alt="Как нас найти"> -->
-          </div>
+          <div class="map"></div>
         </div>
       </div>
     </section>

@@ -23,25 +23,7 @@ h3,
 .logo,
 .down {
   font-family: "inglobal", sans-serif;
-  /*font-weight: 700;
-  font-style: italic;*/
 }
-
-/*div,
-article,
-ul {
-  outline: 1px dashed orangered;
-}
-
-h1,
-h2,
-h3,
-b,
-p,
-a,
-li {
-  outline: 1px dashed #888888;
-}*/
 
 body {
   background-image: url("../img/header-bg.png");
@@ -103,7 +85,6 @@ body {
 .menu-item {
   display: inline-block;
   width: 189px;
-  /*margin-right: 55px;*/
   vertical-align: top;
   text-align: center;
 }
@@ -222,23 +203,10 @@ body {
     -2px 0 0 #1e1e1e,
     /*белая подсветка*/
     0 0 50px rgba(255, 255, 255, 0.5);
-  -ms-transform: rotate(-10.2deg);
+  /*-ms-transform: rotate(-10.2deg);*/
       transform: rotate(-10.2deg);
-
+  filter: Glow(Color=#1e1e1e, Strength=5);
 }
-
-/*.header-text-1::after {
-  content: "Lorem ipsum dolor";
-  position: absolute;
-  top: 0;
-  left: 75px;
-  background-color: #565656;
-  color: transparent;
-  text-shadow: 0px -7px 0 rgba(255, 255, 255, 0.9);
-  -webkit-background-clip: text;
-     -moz-background-clip: text;
-          background-clip: text;
-}*/
 
 .header-text span {
   display: block;
@@ -250,7 +218,6 @@ body {
 }
 
 .header-text-2 {
-
   text-align: right;
 }
 
@@ -335,7 +302,6 @@ body {
 
 .desc-text {
   float: left;
-  /*width: 510px;*/
   width: 52.04081632653061%; /* 510/980 */
   padding-top: 259px;
 }
@@ -354,7 +320,6 @@ body {
 .desc-feedback {
   position: relative;
   float: right;
-  /*width: 419px;*/
   width: 42.75510204081633%; /* 419/980 */
   padding: 142px 0 0 97px;
   padding: 142px 0 0 0;
@@ -362,17 +327,6 @@ body {
   color: #505050;
   background: url("../img/flag-box.png") 140px 50px no-repeat;
 }
-
-/*.desc-feedback::before {
-  content: "";
-  position: absolute;
-  top: 17px;
-  left: 0;
-  z-index: 2;
-  width: 218px;
-  height: 204px;
-  background: url("../img/hat.png") no-repeat;
-}*/
 
 .feedback-wrap {
   position: relative;
@@ -428,12 +382,6 @@ body {
   width: 240px;
   margin: 0 auto 27px auto;
 }
-
-/*.feedback-form input {
-  width: 100%;
-  box-sizing: border-box;
-  border-radius: 5px;
-}*/
 
 .form input {
   width: 100%;
@@ -557,7 +505,6 @@ input:-ms-input-placeholder {
   text-align: center;
   background-image: linear-gradient(#773404, #aa8045);
   color: transparent;
-  text-shadow: -2px 2px 1px rgba(255, 222, 169, 0.3);
   -webkit-background-clip: text;
      -moz-background-clip: text;
           background-clip: text;
@@ -655,6 +602,7 @@ input:-ms-input-placeholder {
 .serv-heading-left {
   color: #0694f8;
   text-shadow: -1px 1px 0 #003c66;
+  filter: Shadow(Color=#003c66, Direction=225, Strength=1);
 }
 
 .serv-heading-right {
@@ -662,6 +610,7 @@ input:-ms-input-placeholder {
   margin-left: auto;
   color: #ff431e;
   text-shadow: 1px 1px 0 #991900;
+  filter: Shadow(Color=#991900, Direction=135, Strength=1);
 }
 
 .serv-text {
@@ -771,6 +720,7 @@ input:-ms-input-placeholder {
   line-height: 1.2;
   color: #ffffff;
   text-shadow: 0 2px 0 #0784dc;
+  filter: Shadow(Color=#0784dc, Direction=180, Strength=2);
 }
 
 .contact-us-phone {
@@ -781,6 +731,7 @@ input:-ms-input-placeholder {
   font-style: italic;
   color: #ffffff;
   text-shadow: 0 2px 0 #0784dc;
+  filter: Shadow(Color=#0784dc, Direction=180, Strength=2);
 }
 
 .contacts-down-text {
@@ -976,6 +927,7 @@ input:-ms-input-placeholder {
   vertical-align: middle;
   color: #ffffff;
   text-shadow: -1px 0 1px #0568b5;
+  filter: Shadow(Color=#0568b5, Direction=270, Strength=1);
 }
 
 .modal-overlay {
@@ -1197,9 +1149,6 @@ input:-ms-input-placeholder {
     display: block;
     background-color: #ffffff;
     width: 100%;
-    /*height: 50px;*/
-    /*box-sizing: border-box;*/
-    /*border-bottom: 1px solid #c8c8c8;*/
   }
 
   .menu-item a {
@@ -1272,7 +1221,6 @@ input:-ms-input-placeholder {
     width: auto;
     font-size: 22px;
     font-size: 6.875vw; /* 22/3,2 */
-    /*transform: none;*/
   }
 
   .header-text-1 {
@@ -1358,7 +1306,6 @@ input:-ms-input-placeholder {
   .desc-heading {
     font-size: 24px;
     line-height: 24px;
-    /*font-size: 7.5vw;*/
   }
 
   .desc-paragraph {
@@ -1375,7 +1322,6 @@ input:-ms-input-placeholder {
   .feedback-wrap {
     width: 320px;
     margin: 0 auto 15px auto;
-    /*border-bottom: none;*/
   }
 
   .why-need {
@@ -1654,5 +1600,12 @@ input:-ms-input-placeholder {
   .feedback-wrap {
     margin-bottom: 0;
     border-bottom: none;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .clients-heading {
+    background-image: none;
+    color: #773404;
   }
 }
